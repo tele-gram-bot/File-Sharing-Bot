@@ -1,0 +1,37 @@
+services:
+  - type: web
+    plan: free
+    name: File-Sharing-Bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo: https://github.com/CodeXBotz/File-Sharing-Bot.git
+    branch: main
+    autoDeploy: false
+    envVars:
+      - key: ADMINS
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: DATABASE_NAME
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DISABLE_CHANNEL_BUTTON
+        sync: false
+      - key: FORCE_SUB_CHANNEL
+        sync: false
+      - key: FORCE_SUB_MESSAGE
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: PROTECT_CONTENT
+        sync: false
+      - key: START_MESSAGE
+        sync: false
+      - key: TG_BOT_TOKEN
+        sync: false
